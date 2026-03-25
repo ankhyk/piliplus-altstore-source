@@ -136,15 +136,6 @@
           "size": 33948554,
           "buildVersion": "30200",
           "minOSVersion": "14.0"
-        },
-        {
-          "version": "4.9.0",
-          "date": "2025-04-19T23:49:10.000Z",
-          "localizedDescription": "- 支持手动更换弹幕和数据源匹配\r\n- 优化 SP/OVA/OAD/剧场版 的检索和匹配\r\n- 支持繁体中文语言",
-          "downloadURL": "https://d2.myani.org/v4.9.0/ani-4.9.0.ipa",
-          "size": 33948595,
-          "buildVersion": "30200",
-          "minOSVersion": "14.0"
         }
       ]
     },
@@ -188,6 +179,24 @@
         "privacy": {}
       },
       "versions": [
+        {
+          "version": "5.4.0-beta05",
+          "date": "2026-03-25T07:25:53.000Z",
+          "localizedDescription": "- 修复缓存页面闪退\r\n- 修复发送剧集评论闪退",
+          "downloadURL": "https://d2.myani.org/v5.4.0-beta05/ani-5.4.0-beta05.ipa",
+          "size": 35418371,
+          "buildVersion": "30200",
+          "minOSVersion": "14.0"
+        },
+        {
+          "version": "5.4.0-beta04",
+          "date": "2026-03-25T02:36:14.000Z",
+          "localizedDescription": "- 修复 HLS 缓存合并失败\r\n- 缓存错误增加提示",
+          "downloadURL": "https://d2.myani.org/v5.4.0-beta04/ani-5.4.0-beta04.ipa",
+          "size": 35411429,
+          "buildVersion": "30200",
+          "minOSVersion": "14.0"
+        },
         {
           "version": "5.4.0-beta03",
           "date": "2026-03-24T03:22:49.000Z",
