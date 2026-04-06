@@ -48,6 +48,15 @@
       },
       "versions": [
         {
+          "version": "5.4.0",
+          "date": "2026-04-06T12:31:28.000Z",
+          "localizedDescription": "- 支持发送评论\r\n- 修复 iOS 缓存无法播放\r\n- 修复 Web 缓存视频元信息错误\r\n- 设置里显示数据 Tier\r\n- 修复缓存页闪退，缓存消失",
+          "downloadURL": "https://d2.myani.org/v5.4.0/ani-5.4.0.ipa",
+          "size": 35415105,
+          "buildVersion": "30200",
+          "minOSVersion": "14.0"
+        },
+        {
           "version": "5.3.2",
           "date": "2026-02-26T06:02:14.000Z",
           "localizedDescription": "- 修复搜索接口的问题",
@@ -338,15 +347,6 @@
           "localizedDescription": "- 显示楼中楼评论\r\n- 修复一些平板上的界面问题\r\n- 修复删除缓存\r\n\r\n**Full Changelog**: https://github.com/open-ani/animeko/compare/v4.10.0-alpha01...v4.10.0-alpha02",
           "downloadURL": "https://github.com/open-ani/ani/releases/download/v4.10.0-alpha02/ani-4.10.0-alpha02.ipa",
           "size": 34523519,
-          "buildVersion": "30200",
-          "minOSVersion": "14.0"
-        },
-        {
-          "version": "4.10.0-alpha01",
-          "date": "2025-04-24T10:58:06.000Z",
-          "localizedDescription": "- 选集播放中将 SP 和正片分开\r\n- 优化 PC 端启动速度\r\n- 支持复制播放链接和 (安卓) 使用外部应用播放",
-          "downloadURL": "https://github.com/open-ani/ani/releases/download/v4.10.0-alpha01/ani-4.10.0-alpha01.ipa",
-          "size": 34329687,
           "buildVersion": "30200",
           "minOSVersion": "14.0"
         }
