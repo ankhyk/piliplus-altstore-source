@@ -6,8 +6,7 @@
 
 可以用于 AltStore、[SideStore](https://sidestore.io/)、[LiveContainer](https://github.com/LiveContainer/LiveContainer) 等支持 AltStore 源格式的应用。
 
-如果你不清楚这是什么可参考 [Animeko 官网的 iOS 安装指南](https://animeko.org/wiki/ios-install) 中的「方法二：使用 AltStore 安装
-」中的「方式 B：通过手机端 AltStore 安装」。
+如果你不清楚这是什么可参考 [Animeko 官网的 iOS 安装指南](https://animeko.org/wiki/ios-install) 中的「方法二：使用 AltStore 安装」中的「方式 B：通过手机端 AltStore 安装」。
 
 将此源 URL 导入到支持 AltStore 源格式的应用中：
 
