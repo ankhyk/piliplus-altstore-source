@@ -6,7 +6,7 @@ const isBetaVersion = (version: string) => version.includes('alpha') || version.
 
 const appTemplate = (baseName: string): Omit<App, 'versions'> => ({
   name: baseName,
-  bundleIdentifier: 'org.openani.Animeko',
+  bundleIdentifier: 'org.animeko.animeko',
   developerName: 'openani',
   localizedDescription:
     '集找番、追番、看番的一站式弹幕追番平台，云收藏同步 (Bangumi)，离线缓存，BitTorrent，弹幕云过滤。',
@@ -82,7 +82,7 @@ export const generateSource = async (): Promise<Source> => {
   const betaApp: App = {
     ...appTemplate('Animeko (Pre-Release)'),
     versions: betaVersions,
-    bundleIdentifier: 'org.openani.Animeko.beta',
+    bundleIdentifier: 'org.animeko.animeko.beta',
   }
 
   const source: Source = {
