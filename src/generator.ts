@@ -1,8 +1,15 @@
+import { coerce, gte } from 'semver'
 import { fetchUpdates } from './api'
 import type { App, Source, SourceVersion } from './types'
 import { updateToSourceVersion } from './utils'
 
 const isBetaVersion = (version: string) => version.includes('alpha') || version.includes('beta')
+
+// 比较版本号是否满足最小版本要求 (>= 5.4.x)
+const meetsMinimumVersion = (version: string, minimumVersion: string = '5.4.0'): boolean => {
+  const parsedVersion = coerce(version)
+  return parsedVersion ? gte(parsedVersion, minimumVersion) : false
+}
 
 const appTemplate = (baseName: string): Omit<App, 'versions'> => ({
   name: baseName,
@@ -63,10 +70,13 @@ export const generateSource = async (): Promise<Source> => {
     console.warn(`[warn] 过滤掉了 ${filteredCount} 个无法下载的版本`)
   }
 
+  // 筛选出满足最小版本要求的版本 (>= 5.4.x)
+  const filteredVersions = allVersions.filter((version) => meetsMinimumVersion(version.version))
+
   const stableVersions: SourceVersion[] = []
   const betaVersions: SourceVersion[] = []
 
-  for (const version of allVersions) {
+  for (const version of filteredVersions) {
     if (isBetaVersion(version.version)) {
       betaVersions.push(version)
     } else {
