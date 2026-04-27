@@ -1,45 +1,27 @@
 {
-  "name": "OpenAni",
-  "iconURL": "https://avatars.githubusercontent.com/u/166622089",
-  "website": "https://myani.org",
-  "tintColor": "#6156e2",
+  "name": "PiliPlus Source",
+  "iconURL": "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/images/logo/logo.png",
+  "website": "https://github.com/bggRGjQaUbCoE/PiliPlus",
+  "tintColor": "#5cb67b",
   "featuredApps": [
-    "org.animeko.animeko"
+    "com.example.piliplus"
   ],
   "apps": [
     {
-      "name": "Animeko",
-      "bundleIdentifier": "org.animeko.animeko",
-      "developerName": "openani",
-      "localizedDescription": "集找番、追番、看番的一站式弹幕追番平台，云收藏同步 (Bangumi)，离线缓存，BitTorrent，弹幕云过滤。",
-      "iconURL": "https://avatars.githubusercontent.com/u/166622089",
-      "tintColor": "#6c9cc4",
+      "name": "PiliPlus",
+      "bundleIdentifier": "com.example.piliplus",
+      "developerName": "bggRGjQaUbCoE",
+      "subtitle": "使用Flutter开发的BiliBili第三方客户端",
+      "localizedDescription": "使用Flutter开发的BiliBili第三方客户端",
+      "iconURL": "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/images/logo/logo.png",
+      "tintColor": "#5cb67b",
       "category": "entertainment",
       "screenshots": {
         "iphone": [
-          "https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/home.png",
-          "https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/anime-schedule.png",
-          "https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/subject-collection.png",
-          "https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/search-by-tag.png",
-          "https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/subject-details.png",
-          "https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/subject-rating.png"
-        ],
-        "ipad": [
-          {
-            "imageURL": "https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/pc-home.png",
-            "width": 2966,
-            "height": 1576
-          },
-          {
-            "imageURL": "https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/pc-search.png",
-            "width": 2722,
-            "height": 1742
-          },
-          {
-            "imageURL": "https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/pc-search-detail.png",
-            "width": 2528,
-            "height": 1742
-          }
+          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/510shots_so.png",
+          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/174shots_so.png",
+          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/850shots_so.png",
+          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/main_screen.png"
         ]
       },
       "appPermissions": {
@@ -48,76 +30,32 @@
       },
       "versions": [
         {
-          "version": "5.4.3",
-          "date": "2026-04-12T02:42:30.000Z",
-          "localizedDescription": "- 修复剧集自动切换错误",
-          "downloadURL": "https://github.com/open-ani/ani/releases/download/v5.4.3/ani-5.4.3.ipa",
-          "size": 35360753,
-          "buildVersion": "50430",
-          "minOSVersion": "14.0"
-        },
-        {
-          "version": "5.4.2",
-          "date": "2026-04-11T04:49:10.000Z",
-          "localizedDescription": "- 修复播放器暂停后可能无法继续播放",
-          "downloadURL": "https://github.com/open-ani/ani/releases/download/v5.4.2/ani-5.4.2.ipa",
-          "size": 35355797,
-          "buildVersion": "50420",
-          "minOSVersion": "14.0"
-        },
-        {
-          "version": "5.4.1",
-          "date": "2026-04-10T09:16:09.000Z",
-          "localizedDescription": "- 修复搜索页无法搜索和闪退的问题",
-          "downloadURL": "https://github.com/open-ani/ani/releases/download/v5.4.1/ani-5.4.1.ipa",
-          "size": 35356124,
-          "buildVersion": "50410",
-          "minOSVersion": "14.0"
-        },
-        {
-          "version": "5.4.0",
-          "date": "2026-04-06T12:31:28.000Z",
-          "localizedDescription": "- 支持发送评论\r\n- 修复 iOS 缓存无法播放\r\n- 修复 Web 缓存视频元信息错误\r\n- 设置里显示数据源 Tier\r\n- 修复缓存页闪退，缓存消失",
-          "downloadURL": "https://github.com/open-ani/ani/releases/download/v5.4.0/ani-5.4.0.ipa",
-          "size": 35415105,
-          "buildVersion": "50400",
+          "version": "2.0.5",
+          "date": "2026-04-25T06:40:11Z",
+          "subtitle": "重新支持移除播放页安全边距\r\n支持评论翻译 #1894 co-by @leset0ng\r\n定时关闭退出 APP 时同步视频进度 #1896 by @cnctem\r\nLinux 支持密码、验证码登录 #1889 by @Tobiichi-Origuchi\r\niOS 切换网络时重置网络链接 #1885 by @stephen-zeng @My-Responsitories\r\n\r\n页面优化\r\n优化音量指示器显示 #1899 by @Starfallan\r\n优化处理专栏字体大小 #1897 by @Starfallan\r\n\r\n修复触摸板滑动\r\n修复桌面端富文本插入编辑\r\n修复 bug\r\n\r\n其他",
+          "localizedDescription": "重新支持移除播放页安全边距\r\n支持评论翻译 #1894 co-by @leset0ng\r\n定时关闭退出 APP 时同步视频进度 #1896 by @cnctem\r\nLinux 支持密码、验证码登录 #1889 by @Tobiichi-Origuchi\r\niOS 切换网络时重置网络链接 #1885 by @stephen-zeng @My-Responsitories\r\n\r\n页面优化\r\n优化音量指示器显示 #1899 by @Starfallan\r\n优化处理专栏字体大小 #1897 by @Starfallan\r\n\r\n修复触摸板滑动\r\n修复桌面端富文本插入编辑\r\n修复 bug\r\n\r\n其他",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.0.5/PiliPlus_ios_2.0.5%2B4886.ipa",
+          "size": 24956612,
+          "buildVersion": "4886",
           "minOSVersion": "14.0"
         }
       ]
     },
     {
-      "name": "Animeko (Pre-Release)",
-      "bundleIdentifier": "org.animeko.animeko.beta",
-      "developerName": "openani",
-      "localizedDescription": "集找番、追番、看番的一站式弹幕追番平台，云收藏同步 (Bangumi)，离线缓存，BitTorrent，弹幕云过滤。",
-      "iconURL": "https://avatars.githubusercontent.com/u/166622089",
-      "tintColor": "#6c9cc4",
+      "name": "PiliPlus",
+      "bundleIdentifier": "com.example.piliplus",
+      "developerName": "bggRGjQaUbCoE",
+      "subtitle": "使用Flutter开发的BiliBili第三方客户端",
+      "localizedDescription": "使用Flutter开发的BiliBili第三方客户端",
+      "iconURL": "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/images/logo/logo.png",
+      "tintColor": "#5cb67b",
       "category": "entertainment",
       "screenshots": {
         "iphone": [
-          "https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/home.png",
-          "https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/anime-schedule.png",
-          "https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/subject-collection.png",
-          "https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/search-by-tag.png",
-          "https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/subject-details.png",
-          "https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/subject-rating.png"
-        ],
-        "ipad": [
-          {
-            "imageURL": "https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/pc-home.png",
-            "width": 2966,
-            "height": 1576
-          },
-          {
-            "imageURL": "https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/pc-search.png",
-            "width": 2722,
-            "height": 1742
-          },
-          {
-            "imageURL": "https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/pc-search-detail.png",
-            "width": 2528,
-            "height": 1742
-          }
+          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/510shots_so.png",
+          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/174shots_so.png",
+          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/850shots_so.png",
+          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/main_screen.png"
         ]
       },
       "appPermissions": {
@@ -126,48 +64,47 @@
       },
       "versions": [
         {
-          "version": "5.5.0-alpha02",
-          "date": "2026-04-15T05:18:52.000Z",
-          "localizedDescription": "- 新增 Linux 支持通过 D-Bus 和 systemd-inhibit 防屏幕休眠\r\n- 修复 Android 应用语言选择不生效\r\n- 修复 iOS 发评论闪退\r\n- 番剧搜索结果支持按 air date 排序",
-          "downloadURL": "https://github.com/open-ani/ani/releases/download/v5.5.0-alpha02/ani-5.5.0-alpha02.ipa",
-          "size": 29708860,
-          "buildVersion": "50501",
+          "version": "2.0.4",
+          "date": "2026-04-14T06:09:41Z",
+          "subtitle": "播放页优化\r\n优化视频旋转方向\r\n优化视频进度条显示 #1887 co-by @cnctem\r\n移动端屏蔽列表底部边缘滑动，避免和系统手势冲突\r\n其他",
+          "localizedDescription": "播放页优化\r\n优化视频旋转方向\r\n优化视频进度条显示 #1887 co-by @cnctem\r\n移动端屏蔽列表底部边缘滑动，避免和系统手势冲突\r\n其他",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.0.4/PiliPlus_ios_2.0.4%2B4848.ipa",
+          "size": 24961961,
+          "buildVersion": "4848",
           "minOSVersion": "14.0"
-        },
+        }
+      ]
+    },
+    {
+      "name": "PiliPlus",
+      "bundleIdentifier": "com.example.piliplus",
+      "developerName": "bggRGjQaUbCoE",
+      "subtitle": "使用Flutter开发的BiliBili第三方客户端",
+      "localizedDescription": "使用Flutter开发的BiliBili第三方客户端",
+      "iconURL": "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/images/logo/logo.png",
+      "tintColor": "#5cb67b",
+      "category": "entertainment",
+      "screenshots": {
+        "iphone": [
+          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/510shots_so.png",
+          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/174shots_so.png",
+          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/850shots_so.png",
+          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/main_screen.png"
+        ]
+      },
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      },
+      "versions": [
         {
-          "version": "5.4.0-beta05",
-          "date": "2026-03-25T07:25:53.000Z",
-          "localizedDescription": "- 修复缓存页面闪退\r\n- 修复发送剧集评论闪退",
-          "downloadURL": "https://github.com/open-ani/ani/releases/download/v5.4.0-beta05/ani-5.4.0-beta05.ipa",
-          "size": 35418371,
-          "buildVersion": "50409",
-          "minOSVersion": "14.0"
-        },
-        {
-          "version": "5.4.0-beta04",
-          "date": "2026-03-25T02:36:14.000Z",
-          "localizedDescription": "- 修复 HLS 缓存合并失败\r\n- 缓存错误增加提示",
-          "downloadURL": "https://d2.myani.org/v5.4.0-beta04/ani-5.4.0-beta04.ipa",
-          "size": 35411429,
-          "buildVersion": "50408",
-          "minOSVersion": "14.0"
-        },
-        {
-          "version": "5.4.0-beta03",
-          "date": "2026-03-24T03:22:49.000Z",
-          "localizedDescription": "- 修复缓存消失问题\r\n- 修复缓存页闪退问题",
-          "downloadURL": "https://github.com/open-ani/ani/releases/download/v5.4.0-beta03/ani-5.4.0-beta03.ipa",
-          "size": 35401953,
-          "buildVersion": "50407",
-          "minOSVersion": "14.0"
-        },
-        {
-          "version": "5.4.0-beta02",
-          "date": "2026-03-18T04:25:52.000Z",
-          "localizedDescription": "- 修复缓存的各种问题\r\n- 修复 iOS 无法播放缓存的问题\r\n- 支持手动通过数据源的搜索验证\r\n- 支持发评论到 ani 服务器",
-          "downloadURL": "https://github.com/open-ani/ani/releases/download/v5.4.0-beta02/ani-5.4.0-beta02.ipa",
-          "size": 35393765,
-          "buildVersion": "50406",
+          "version": "2.0.3.2",
+          "date": "2026-04-11T02:06:32Z",
+          "subtitle": "优化视频旋转方向\r\n\r\n## 2.0.3.1\r\n修复视频返回按钮 @1883 by @HChaZZY\r\n\r\n## 2.0.3\r\n重写视频方向控制逻辑:\r\n解决 iOS 横屏从后台返回自动切换为竖屏问题\r\n解决 iOS 横屏关闭自动旋转自动切换为竖屏问题\r\n解决 Android 横屏返回键切换为竖屏自动切换回横屏问题\r\n\r\n支持悬浮底栏，默认关\r\n用户主页显示预约按钮\r\n添加 Android Shortcut\r\nAndroid 支持添加 UP 至桌面\r\n桌面端离线视频支持在本地文件夹打开\r\n\r\n修复 AppSign\r\n修复弹幕等级屏蔽无效 #1879 by @HChaZZY",
+          "localizedDescription": "优化视频旋转方向\r\n\r\n## 2.0.3.1\r\n修复视频返回按钮 @1883 by @HChaZZY\r\n\r\n## 2.0.3\r\n重写视频方向控制逻辑:\r\n解决 iOS 横屏从后台返回自动切换为竖屏问题\r\n解决 iOS 横屏关闭自动旋转自动切换为竖屏问题\r\n解决 Android 横屏返回键切换为竖屏自动切换回横屏问题\r\n\r\n支持悬浮底栏，默认关\r\n用户主页显示预约按钮\r\n添加 Android Shortcut\r\nAndroid 支持添加 UP 至桌面\r\n桌面端离线视频支持在本地文件夹打开\r\n\r\n修复 AppSign\r\n修复弹幕等级屏蔽无效 #1879 by @HChaZZY",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.0.3.2/PiliPlus_ios_2.0.3%2B4841.ipa",
+          "size": 24957050,
+          "buildVersion": "4841",
           "minOSVersion": "14.0"
         }
       ]

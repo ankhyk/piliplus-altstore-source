@@ -1,13 +1,12 @@
-import type { Updates } from './types'
+import type { Releases } from './types'
 
-export const fetchUpdates = async () => {
-  const url =
-    'https://danmaku-cn.myani.org/v1/updates/incremental/details?clientVersion=4.0.0&clientPlatform=ios&clientArch=aarch64&releaseClass=alpha'
+export const fetchReleases = async () => {
+  const url = 'https://api.github.com/repos/bggRGjQaUbCoE/PiliPlus/releases'
 
   const response = await fetch(url)
   if (!response.ok) {
-    throw new Error(`Failed to fetch updates: ${response.status} ${response.statusText}`)
+    throw new Error(`Failed to fetch releases: ${response.status} ${response.statusText}`)
   }
 
-  return response.json() as Promise<Updates>
+  return response.json() as Promise<Releases>
 }

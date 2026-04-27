@@ -1,82 +1,52 @@
 import { Listr } from 'listr2'
-import { coerce, gte } from 'semver'
-import { fetchUpdates } from './api'
+import { fetchReleases } from './api'
 import type { App, Source, SourceVersion } from './types'
 import { updateToSourceVersion } from './utils'
 
-const isBetaVersion = (version: string) => version.includes('alpha') || version.includes('beta')
-
-// 比较版本号是否满足最小版本要求 (>= 5.4.x)
-const meetsMinimumVersion = (version: string, minimumVersion: string = '5.4.0'): boolean => {
-  const parsedVersion = coerce(version)
-  return parsedVersion ? gte(parsedVersion, minimumVersion) : false
-}
-
-const appTemplate = (baseName: string): Omit<App, 'versions'> => ({
-  name: baseName,
-  bundleIdentifier: 'org.animeko.animeko',
-  developerName: 'openani',
-  localizedDescription:
-    '集找番、追番、看番的一站式弹幕追番平台，云收藏同步 (Bangumi)，离线缓存，BitTorrent，弹幕云过滤。',
-  iconURL: 'https://avatars.githubusercontent.com/u/166622089',
-  tintColor: '#6c9cc4',
+const appTemplate: Omit<App, 'versions'> = {
+  name: 'PiliPlus',
+  bundleIdentifier: 'com.example.piliplus',
+  developerName: 'bggRGjQaUbCoE',
+  subtitle: '使用Flutter开发的BiliBili第三方客户端',
+  localizedDescription: '使用Flutter开发的BiliBili第三方客户端',
+  iconURL:
+    'https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/images/logo/logo.png',
+  tintColor: '#5cb67b',
   category: 'entertainment',
   screenshots: {
     iphone: [
-      'https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/home.png',
-      'https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/anime-schedule.png',
-      'https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/subject-collection.png',
-      'https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/search-by-tag.png',
-      'https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/subject-details.png',
-      'https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/subject-rating.png',
-    ],
-    ipad: [
-      {
-        imageURL:
-          'https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/pc-home.png',
-        width: 2966,
-        height: 1576,
-      },
-      {
-        imageURL:
-          'https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/pc-search.png',
-        width: 2722,
-        height: 1742,
-      },
-      {
-        imageURL:
-          'https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/pc-search-detail.png',
-        width: 2528,
-        height: 1742,
-      },
+      'https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/510shots_so.png',
+      'https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/174shots_so.png',
+      'https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/850shots_so.png',
+      'https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/main_screen.png',
     ],
   },
   appPermissions: {
     entitlements: [],
     privacy: {},
   },
-})
+}
 
 export const generateSource = async (): Promise<Source> => {
-  const { updates } = await fetchUpdates()
+  const releases = await fetchReleases()
+  const latest3Releases = releases.slice(0, 3)
+  if (!latest3Releases) {
+    throw new Error('未找到任何版本')
+  }
 
-  // 筛选出满足最小版本要求的版本 (>= 5.4.x)
-  const orderedUpdates = updates
-    .filter((update) => meetsMinimumVersion(update.version))
-    .toReversed()
-  const allVersionResults: Array<SourceVersion | null> = new Array(orderedUpdates.length).fill(null)
+  const allVersionResults: Array<SourceVersion | null> = new Array(5).fill(null)
 
   const tasks = new Listr(
-    orderedUpdates.map((update, index) => ({
-      title: `处理 ${update.version}`,
+    latest3Releases.map((release, index) => ({
+      title: `处理 ${release.tag_name}`,
       task: async () => {
-        const sourceVersion = await updateToSourceVersion(update)
+        const sourceVersion = await updateToSourceVersion(release)
 
         allVersionResults[index] = sourceVersion
       },
     })),
     {
-      concurrent: 6,
+      concurrent: 5,
       exitOnError: false,
     }
   )
@@ -92,35 +62,18 @@ export const generateSource = async (): Promise<Source> => {
     console.warn(`[warn] 过滤掉了 ${filteredCount} 个无法下载的版本`)
   }
 
-  const stableVersions: SourceVersion[] = []
-  const betaVersions: SourceVersion[] = []
-
-  for (const version of allVersions) {
-    if (isBetaVersion(version.version)) {
-      betaVersions.push(version)
-    } else {
-      stableVersions.push(version)
-    }
-  }
-
-  const stableApp: App = {
-    ...appTemplate('Animeko'),
-    versions: stableVersions,
-  }
-
-  const betaApp: App = {
-    ...appTemplate('Animeko (Pre-Release)'),
-    versions: betaVersions,
-    bundleIdentifier: 'org.animeko.animeko.beta',
-  }
+  const apps: App[] = allVersions.map((version) => ({
+    ...appTemplate,
+    versions: [version],
+  }))
 
   const source: Source = {
-    name: 'OpenAni',
-    iconURL: 'https://avatars.githubusercontent.com/u/166622089',
-    website: 'https://myani.org',
-    tintColor: '#6156e2',
-    featuredApps: [stableApp.bundleIdentifier],
-    apps: [stableApp, betaApp],
+    name: 'PiliPlus Source',
+    iconURL: appTemplate.iconURL,
+    website: 'https://github.com/bggRGjQaUbCoE/PiliPlus',
+    tintColor: appTemplate.tintColor,
+    featuredApps: [appTemplate.bundleIdentifier],
+    apps: [...apps],
     news: [],
   }
 

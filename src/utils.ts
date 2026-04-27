@@ -1,7 +1,7 @@
 import { parseBuffer } from 'bplist-parser'
 import { strFromU8, unzipSync } from 'fflate'
 import { parse } from 'plist'
-import type { SourceVersion, Update } from './types'
+import type { Release, SourceVersion } from './types'
 
 // Extract from plist
 const DEFAULT_MIN_OS_VERSION = '14.0'
@@ -81,34 +81,35 @@ const downloadAndExtractBuildVersion = async (
   }
 }
 
-export const timestampToISO = (timestamp: number) => new Date(timestamp * 1000).toISOString()
-
-export const updateToSourceVersion = async (update: Update): Promise<SourceVersion | null> => {
-  if (update.downloadUrlAlternatives.length === 0) {
-    console.warn(`[warn] ${update.version} 无可用的下载链接。`)
+export const updateToSourceVersion = async (release: Release): Promise<SourceVersion | null> => {
+  if (release.assets.length === 0) {
+    console.warn(`[warn] ${release.tag_name} 无可用的下载链接。`)
     return null
   }
 
   const abortController = new AbortController()
-  const jobs = update.downloadUrlAlternatives.map((url) =>
-    downloadAndExtractBuildVersion(url, abortController.signal)
-  )
+  const jobs = release.assets
+    .filter((asset) => asset.name.endsWith('.ipa'))
+    .map((asset) =>
+      downloadAndExtractBuildVersion(asset.browser_download_url, abortController.signal)
+    )
 
   try {
     const firstSuccess = await Promise.any(jobs)
     abortController.abort()
 
     return {
-      version: update.version,
-      date: timestampToISO(update.publishTime),
-      localizedDescription: update.description,
+      version: release.tag_name,
+      date: release.published_at,
+      subtitle: release.body,
+      localizedDescription: release.body,
       downloadURL: firstSuccess.normalizedURL,
       size: firstSuccess.size,
       buildVersion: firstSuccess.buildVersion,
       minOSVersion: DEFAULT_MIN_OS_VERSION,
     }
   } catch {
-    console.warn(`[warn] ${update.version} 无可用的下载链接或无法解析 IPA。`)
+    console.warn(`[warn] ${release.tag_name} 无可用的下载链接或无法解析 IPA。`)
     return null
   }
 }
