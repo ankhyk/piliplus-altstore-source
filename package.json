@@ -1,17 +1,17 @@
 {
   "private": true,
   "type": "module",
-  "name": "ani-altstore-source",
+  "name": "piliplus-altstore-source",
   "version": "0.0.0",
-  "description": "Altstore source for Animeko",
-  "homepage": "https://github.com/maxchang3/ani-altstore-source#readme",
-  "bugs": "https://github.com/maxchang3/ani-altstore-source/issues",
+  "description": "Altstore source for PiliPlus",
+  "homepage": "https://github.com/ankhyk/piliplus-altstore-source#readme",
+  "bugs": "https://github.com/ankhyk/piliplus-altstore-source/issues",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maxchang3/ani-altstore-source.git"
+    "url": "git+https://github.com/ankhyk/piliplus-altstore-source.git"
   },
   "license": "MIT",
-  "author": "maxchang3",
+  "author": "ankhyk",
   "scripts": {
     "generate": "bun run src/index.ts",
     "lint": "biome check",
