@@ -30,6 +30,40 @@
       },
       "versions": [
         {
+          "version": "2.0.7",
+          "date": "2026-05-05T02:45:57Z",
+          "subtitle": "优化安卓倾斜角度切视频换方向 #1953\r\n桌面端音频播放页支持调节音量 #1950\r\n评论转发到动态文字按钮改成图标按钮 #1937\r\n直播发送弹幕面板半透明背景改为透明 #1944\r\n\r\n修复评论布局 #1925\r\n修复 iOS 侧滑手势冲突 #1929\r\n修复一些安卓设备无法降低系统亮度\r\n修复关闭二级页面时其余手势被取消 #1947\r\n修复视频方向切换 #1926 by @My-Responsitories\r\n修复搜索结果标题符号显示 #1956 by @My-Responsitories",
+          "localizedDescription": "优化安卓倾斜角度切视频换方向 #1953\r\n桌面端音频播放页支持调节音量 #1950\r\n评论转发到动态文字按钮改成图标按钮 #1937\r\n直播发送弹幕面板半透明背景改为透明 #1944\r\n\r\n修复评论布局 #1925\r\n修复 iOS 侧滑手势冲突 #1929\r\n修复一些安卓设备无法降低系统亮度\r\n修复关闭二级页面时其余手势被取消 #1947\r\n修复视频方向切换 #1926 by @My-Responsitories\r\n修复搜索结果标题符号显示 #1956 by @My-Responsitories",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.0.7/PiliPlus_ios_2.0.7%2B4940.ipa",
+          "size": 23938472,
+          "buildVersion": "4940",
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "PiliPlus",
+      "bundleIdentifier": "com.example.piliplus",
+      "developerName": "bggRGjQaUbCoE",
+      "subtitle": "使用Flutter开发的BiliBili第三方客户端",
+      "localizedDescription": "使用Flutter开发的BiliBili第三方客户端",
+      "iconURL": "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/images/logo/logo.png",
+      "tintColor": "#5cb67b",
+      "category": "entertainment",
+      "screenshots": {
+        "iphone": [
+          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/510shots_so.png",
+          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/174shots_so.png",
+          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/850shots_so.png",
+          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/main_screen.png"
+        ]
+      },
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      },
+      "versions": [
+        {
           "version": "2.0.6",
           "date": "2026-04-30T09:57:52Z",
           "subtitle": "支持关注分组排序\r\n支持从关注面板创建分组\r\n支持调节全屏 SC 大小 #1910\r\n查看大图时隐藏状态栏、导航栏\r\n优化安卓平板、小窗播放界面 #1908\r\niOS 打开二级页面时支持侧滑关闭整个页面 #1906\r\n评论自由复制面板支持选词屏蔽 #1903 by @My-Responsitories\r\n\r\n优化退出播放页音频停止播放迟缓问题\r\n\r\n修复 #1901\r\n修复 #1904\r\n修复 #1917\r\n修复连接蓝牙键鼠闪退\r\n修复 bug",
@@ -71,40 +105,6 @@
           "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.0.5/PiliPlus_ios_2.0.5%2B4886.ipa",
           "size": 24956612,
           "buildVersion": "4886",
-          "minOSVersion": "14.0"
-        }
-      ]
-    },
-    {
-      "name": "PiliPlus",
-      "bundleIdentifier": "com.example.piliplus",
-      "developerName": "bggRGjQaUbCoE",
-      "subtitle": "使用Flutter开发的BiliBili第三方客户端",
-      "localizedDescription": "使用Flutter开发的BiliBili第三方客户端",
-      "iconURL": "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/images/logo/logo.png",
-      "tintColor": "#5cb67b",
-      "category": "entertainment",
-      "screenshots": {
-        "iphone": [
-          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/510shots_so.png",
-          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/174shots_so.png",
-          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/850shots_so.png",
-          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/main_screen.png"
-        ]
-      },
-      "appPermissions": {
-        "entitlements": [],
-        "privacy": {}
-      },
-      "versions": [
-        {
-          "version": "2.0.4",
-          "date": "2026-04-14T06:09:41Z",
-          "subtitle": "播放页优化\r\n优化视频旋转方向\r\n优化视频进度条显示 #1887 co-by @cnctem\r\n移动端屏蔽列表底部边缘滑动，避免和系统手势冲突\r\n其他",
-          "localizedDescription": "播放页优化\r\n优化视频旋转方向\r\n优化视频进度条显示 #1887 co-by @cnctem\r\n移动端屏蔽列表底部边缘滑动，避免和系统手势冲突\r\n其他",
-          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.0.4/PiliPlus_ios_2.0.4%2B4848.ipa",
-          "size": 24961961,
-          "buildVersion": "4848",
           "minOSVersion": "14.0"
         }
       ]
