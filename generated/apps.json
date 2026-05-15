@@ -30,6 +30,40 @@
       },
       "versions": [
         {
+          "version": "2.0.7.2",
+          "date": "2026-05-15T03:21:02Z",
+          "subtitle": "修复 #2075 #2087\r\n其他调整 #2100 by @My-Responsitories\r\n定时发布动态不立即检查是否可见 #2059 by @uhiovk",
+          "localizedDescription": "修复 #2075 #2087\r\n其他调整 #2100 by @My-Responsitories\r\n定时发布动态不立即检查是否可见 #2059 by @uhiovk",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.0.7.2/PiliPlus_ios_2.0.7%2B4956.ipa",
+          "size": 23837357,
+          "buildVersion": "4956",
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "PiliPlus",
+      "bundleIdentifier": "com.example.piliplus",
+      "developerName": "bggRGjQaUbCoE",
+      "subtitle": "使用Flutter开发的BiliBili第三方客户端",
+      "localizedDescription": "使用Flutter开发的BiliBili第三方客户端",
+      "iconURL": "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/images/logo/logo.png",
+      "tintColor": "#5cb67b",
+      "category": "entertainment",
+      "screenshots": {
+        "iphone": [
+          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/510shots_so.png",
+          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/174shots_so.png",
+          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/850shots_so.png",
+          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/main_screen.png"
+        ]
+      },
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      },
+      "versions": [
+        {
           "version": "2.0.7.1",
           "date": "2026-05-10T11:03:41Z",
           "subtitle": "修复 #2002\r\n修复 #2020 by @My-Responsitories\r\n其他调整 #2032 by @My-Responsitories",
@@ -71,40 +105,6 @@
           "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.0.7/PiliPlus_ios_2.0.7%2B4940.ipa",
           "size": 23938472,
           "buildVersion": "4940",
-          "minOSVersion": "14.0"
-        }
-      ]
-    },
-    {
-      "name": "PiliPlus",
-      "bundleIdentifier": "com.example.piliplus",
-      "developerName": "bggRGjQaUbCoE",
-      "subtitle": "使用Flutter开发的BiliBili第三方客户端",
-      "localizedDescription": "使用Flutter开发的BiliBili第三方客户端",
-      "iconURL": "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/images/logo/logo.png",
-      "tintColor": "#5cb67b",
-      "category": "entertainment",
-      "screenshots": {
-        "iphone": [
-          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/510shots_so.png",
-          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/174shots_so.png",
-          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/850shots_so.png",
-          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/main_screen.png"
-        ]
-      },
-      "appPermissions": {
-        "entitlements": [],
-        "privacy": {}
-      },
-      "versions": [
-        {
-          "version": "2.0.6",
-          "date": "2026-04-30T09:57:52Z",
-          "subtitle": "支持关注分组排序\r\n支持从关注面板创建分组\r\n支持调节全屏 SC 大小 #1910\r\n查看大图时隐藏状态栏、导航栏\r\n优化安卓平板、小窗播放界面 #1908\r\niOS 打开二级页面时支持侧滑关闭整个页面 #1906\r\n评论自由复制面板支持选词屏蔽 #1903 by @My-Responsitories\r\n\r\n优化退出播放页音频停止播放迟缓问题\r\n\r\n修复 #1901\r\n修复 #1904\r\n修复 #1917\r\n修复连接蓝牙键鼠闪退\r\n修复 bug",
-          "localizedDescription": "支持关注分组排序\r\n支持从关注面板创建分组\r\n支持调节全屏 SC 大小 #1910\r\n查看大图时隐藏状态栏、导航栏\r\n优化安卓平板、小窗播放界面 #1908\r\niOS 打开二级页面时支持侧滑关闭整个页面 #1906\r\n评论自由复制面板支持选词屏蔽 #1903 by @My-Responsitories\r\n\r\n优化退出播放页音频停止播放迟缓问题\r\n\r\n修复 #1901\r\n修复 #1904\r\n修复 #1917\r\n修复连接蓝牙键鼠闪退\r\n修复 bug",
-          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.0.6/PiliPlus_ios_2.0.6%2B4915.ipa",
-          "size": 24972236,
-          "buildVersion": "4915",
           "minOSVersion": "14.0"
         }
       ]
