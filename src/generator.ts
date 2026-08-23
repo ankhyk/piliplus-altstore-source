@@ -27,17 +27,21 @@ const appTemplate: Omit<App, 'versions'> = {
   },
 }
 
-export const generateSource = async (): Promise<Source> => {
+export const generateSource = async (versionCount: number): Promise<Source> => {
+  if (!Number.isInteger(versionCount) || versionCount < 1) {
+    throw new RangeError('版本数量必须是大于 0 的整数')
+  }
+
   const releases = await fetchReleases()
-  const latest3Releases = releases.slice(0, 3)
-  if (!latest3Releases) {
+  const latestReleases = releases.slice(0, versionCount)
+  if (latestReleases.length === 0) {
     throw new Error('未找到任何版本')
   }
 
-  const allVersionResults: Array<SourceVersion | null> = new Array(5).fill(null)
+  const allVersionResults: Array<SourceVersion | null> = new Array(latestReleases.length).fill(null)
 
   const tasks = new Listr(
-    latest3Releases.map((release, index) => ({
+    latestReleases.map((release, index) => ({
       title: `处理 ${release.tag_name}`,
       task: async () => {
         const sourceVersion = await updateToSourceVersion(release)
@@ -46,7 +50,7 @@ export const generateSource = async (): Promise<Source> => {
       },
     })),
     {
-      concurrent: 5,
+      concurrent: Math.min(5, latestReleases.length),
       exitOnError: false,
     }
   )
@@ -57,8 +61,8 @@ export const generateSource = async (): Promise<Source> => {
     (version): version is SourceVersion => version !== null
   )
 
-  if (allVersionResults.length !== allVersions.length) {
-    const filteredCount = allVersionResults.length - allVersions.length
+  if (allVersions.length !== latestReleases.length) {
+    const filteredCount = latestReleases.length - allVersions.length
     console.warn(`[warn] 过滤掉了 ${filteredCount} 个无法下载的版本`)
   }
 

@@ -8,11 +8,21 @@
 
 将此源 URL 导入到支持 AltStore 源格式的应用中：
 
+> 为方便版本回退，默认源包含最近 3 个版本
+
 ```
 https://raw.githubusercontent.com/ankhyk/piliplus-altstore-source/main/generated/apps.json
 ```
 
 [[在线预览]](https://therealfoxster.github.io/altsource-viewer/view/?source=https://raw.githubusercontent.com/ankhyk/piliplus-altstore-source/main/generated/apps.json)（由 [altsource-viewer](https://github.com/therealFoxster/altsource-viewer) 提供）
+
+如果您使用 AltStore 等只支持单应用源的应用，请使用单应用源：
+
+```
+https://raw.githubusercontent.com/ankhyk/piliplus-altstore-source/main/generated/app.json
+```
+
+[[在线预览]](https://therealfoxster.github.io/altsource-viewer/view/?source=https://raw.githubusercontent.com/ankhyk/piliplus-altstore-source/main/generated/app.json)（由 [altsource-viewer](https://github.com/therealFoxster/altsource-viewer) 提供）
 
 ---
 
@@ -22,11 +32,21 @@ It can be used with AltStore, [SideStore](https://sidestore.io/), [LiveContainer
 
 Import this source URL into your AltStore-compatible app:
 
+> To make version rollbacks easier, the default source contains the latest 3 versions
+
 ```
 https://raw.githubusercontent.com/ankhyk/piliplus-altstore-source/main/generated/apps.json
 ```
 
 [[Online Preview]](https://therealfoxster.github.io/altsource-viewer/view/?source=https://raw.githubusercontent.com/ankhyk/piliplus-altstore-source/main/generated/apps.json) (powered by [altsource-viewer](https://github.com/therealFoxster/altsource-viewer))
+
+If you use an app such as AltStore that only supports a single-app source, please use:
+
+```
+https://raw.githubusercontent.com/ankhyk/piliplus-altstore-source/main/generated/app.json
+```
+
+[[Online Preview]](https://therealfoxster.github.io/altsource-viewer/view/?source=https://raw.githubusercontent.com/ankhyk/piliplus-altstore-source/main/generated/app.json) (powered by [altsource-viewer](https://github.com/therealFoxster/altsource-viewer))
 
 ---
 ## Credits
@@ -46,4 +66,3 @@ Modified work © [ankhyk](https://github.com/ankhyk)
 
 [license-src]: https://img.shields.io/github/license/ankhyk/piliplus-altstore-source.svg?style=flat&colorA=080f12&colorB=1fa669
 [license-href]: https://github.com/ankhyk/piliplus-altstore-source/blob/main/LICENSE
-
