@@ -30,6 +30,40 @@
       },
       "versions": [
         {
+          "version": "2.1.5",
+          "date": "2026-09-25T04:14:09Z",
+          "subtitle": "支持自定义主题颜色 #3009\r\n综合搜索用户过滤黑名单 #3043\r\n可复制文本工具栏默认添加站内搜索按钮 #2984\r\n支持保存 SC 为图片 co-by @My-Responsitories\r\n支持 Windows deeplink #2673 by @HChaZZY\r\n支持 Linux deeplink #2931 by @Tobiichi-Origuchi\r\n降低桌面端 PIP 大小限制 #2735 #2982 by @Aclguh\r\n桌面端支持保存全部图片 #2920 #2983 by @My-Responsitories\r\nLinux 支持内嵌 WebView #3014 #3016 by @Tobiichi-Origuchi co-by @My-Responsitories\r\n其他调整 #2962 #3025 #3027 by @My-Responsitories\r\n\r\n修复分 P 视频链接 #2963\r\n修复滑动快进/退震动失效 #2966\r\n修复小窗模式下画面被 SC 遮挡 #3005\r\n修复无痕模式出现直播入场提示 #2971\r\n修复多次点击截图保存退出视频页面 #3017\r\n修复更新媒体通知、后台连播 #2761 #2943\r\n修复 iOS 静音模式下偶发视频无声修复 #3039 @sounfury\r\n修复部分安卓无法登录 #2930 #3063 by @Tobiichi-Origuchi\r\n修复 macOS 切换全屏控件无法点击 #2917 #2976 by @milk2715093695",
+          "localizedDescription": "支持自定义主题颜色 #3009\r\n综合搜索用户过滤黑名单 #3043\r\n可复制文本工具栏默认添加站内搜索按钮 #2984\r\n支持保存 SC 为图片 co-by @My-Responsitories\r\n支持 Windows deeplink #2673 by @HChaZZY\r\n支持 Linux deeplink #2931 by @Tobiichi-Origuchi\r\n降低桌面端 PIP 大小限制 #2735 #2982 by @Aclguh\r\n桌面端支持保存全部图片 #2920 #2983 by @My-Responsitories\r\nLinux 支持内嵌 WebView #3014 #3016 by @Tobiichi-Origuchi co-by @My-Responsitories\r\n其他调整 #2962 #3025 #3027 by @My-Responsitories\r\n\r\n修复分 P 视频链接 #2963\r\n修复滑动快进/退震动失效 #2966\r\n修复小窗模式下画面被 SC 遮挡 #3005\r\n修复无痕模式出现直播入场提示 #2971\r\n修复多次点击截图保存退出视频页面 #3017\r\n修复更新媒体通知、后台连播 #2761 #2943\r\n修复 iOS 静音模式下偶发视频无声修复 #3039 @sounfury\r\n修复部分安卓无法登录 #2930 #3063 by @Tobiichi-Origuchi\r\n修复 macOS 切换全屏控件无法点击 #2917 #2976 by @milk2715093695",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.5/PiliPlus_ios_2.1.5%2B5410.ipa",
+          "size": 23999265,
+          "buildVersion": "5410",
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "PiliPlus",
+      "bundleIdentifier": "com.example.piliplus",
+      "developerName": "bggRGjQaUbCoE",
+      "subtitle": "使用Flutter开发的BiliBili第三方客户端",
+      "localizedDescription": "使用Flutter开发的BiliBili第三方客户端",
+      "iconURL": "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/images/logo/logo.png",
+      "tintColor": "#5cb67b",
+      "category": "entertainment",
+      "screenshots": {
+        "iphone": [
+          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/510shots_so.png",
+          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/174shots_so.png",
+          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/850shots_so.png",
+          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/main_screen.png"
+        ]
+      },
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      },
+      "versions": [
+        {
           "version": "2.1.4",
           "date": "2026-09-13T06:15:54Z",
           "subtitle": "增加综合搜索\r\n收藏页支持切换页码为倒序\r\n重构定位视频加载前页视频逻辑\r\n支持分开查看动态`赞`与`转发`详情\r\n收藏夹`复制`/`移动`视频时保持顺序 #2850\r\n其他调整 #2889 by @My-Responsitories\r\n播放器优化 #2873 by @My-Responsitories\r\n支持点击动态/评论表情显示 Tooltip，默认关 #2918\r\n\r\n修复 #2892 #2899 #2909 #2949 #2950 #2956\r\n修复 #2882 by @Tobiichi-Origuchi",
@@ -71,40 +105,6 @@
           "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.3.1/PiliPlus_ios_2.1.3%2B5315.ipa",
           "size": 23970852,
           "buildVersion": "5315",
-          "minOSVersion": "14.0"
-        }
-      ]
-    },
-    {
-      "name": "PiliPlus",
-      "bundleIdentifier": "com.example.piliplus",
-      "developerName": "bggRGjQaUbCoE",
-      "subtitle": "使用Flutter开发的BiliBili第三方客户端",
-      "localizedDescription": "使用Flutter开发的BiliBili第三方客户端",
-      "iconURL": "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/images/logo/logo.png",
-      "tintColor": "#5cb67b",
-      "category": "entertainment",
-      "screenshots": {
-        "iphone": [
-          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/510shots_so.png",
-          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/174shots_so.png",
-          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/850shots_so.png",
-          "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/main_screen.png"
-        ]
-      },
-      "appPermissions": {
-        "entitlements": [],
-        "privacy": {}
-      },
-      "versions": [
-        {
-          "version": "2.1.3",
-          "date": "2026-09-05T03:28:46Z",
-          "subtitle": "限制直播聊天缓存条目\r\n音频播放页配置音量均衡 #2598 by @Eazed-Yu\r\n限制离线弹幕下载并发 #2800 by @KIDA-MNESIA\r\n关注分组支持切换排序方式 #2772 co-by @defghy\r\nLinux 支持 WebView #2843 by @Tobiichi-Origuchi\r\n支持显示定时关闭剩余时间 #2461 co-by @SXP-Simon\r\n更新直播弹幕屏蔽页面，实现直播弹幕屏蔽 #2821 by @Starfallan\r\niOS 设置 `ITSAppUsesNonExemptEncryption` 属性 #2789 by @maoawa\r\n评论输入框增加 LaTeX 公式转 Unicode 开关 #2792 by @milk2715093695\r\n修复部分视频画质切换问题 #2810 #2828 by @TomorrowX6 co-by @My-Responsitories\r\n\r\n优化字体自重 #2787 by @My-Responsitories\r\n优化/修复账号逻辑 #2794 #2797 by @KIDA-MNESIA #2817 by @My-Responsitories\r\n\r\n修复 #2709 #2816 #2836 #2837",
-          "localizedDescription": "限制直播聊天缓存条目\r\n音频播放页配置音量均衡 #2598 by @Eazed-Yu\r\n限制离线弹幕下载并发 #2800 by @KIDA-MNESIA\r\n关注分组支持切换排序方式 #2772 co-by @defghy\r\nLinux 支持 WebView #2843 by @Tobiichi-Origuchi\r\n支持显示定时关闭剩余时间 #2461 co-by @SXP-Simon\r\n更新直播弹幕屏蔽页面，实现直播弹幕屏蔽 #2821 by @Starfallan\r\niOS 设置 `ITSAppUsesNonExemptEncryption` 属性 #2789 by @maoawa\r\n评论输入框增加 LaTeX 公式转 Unicode 开关 #2792 by @milk2715093695\r\n修复部分视频画质切换问题 #2810 #2828 by @TomorrowX6 co-by @My-Responsitories\r\n\r\n优化字体自重 #2787 by @My-Responsitories\r\n优化/修复账号逻辑 #2794 #2797 by @KIDA-MNESIA #2817 by @My-Responsitories\r\n\r\n修复 #2709 #2816 #2836 #2837",
-          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.3/PiliPlus_ios_2.1.3%2B5314.ipa",
-          "size": 23968767,
-          "buildVersion": "5314",
           "minOSVersion": "14.0"
         }
       ]
